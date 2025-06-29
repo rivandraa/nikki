@@ -1,0 +1,36 @@
+name: Update Repository from Upstream
+
+on:
+  schedule:
+    - cron: '0 3 * * *' # Setiap hari jam 10:00 WIB
+  workflow_dispatch:    # Bisa dijalankan manual
+
+jobs:
+  update-repo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false # Gunakan token di step selanjutnya
+
+      - name: Set up Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+      - name: Add upstream remote
+        run: |
+          git remote add upstream https://github.com/nikkinikki-org/OpenWrt-nikki.git
+          git fetch upstream
+
+      - name: Merge upstream changes
+        run: |
+          git merge upstream/main || true
+
+      - name: Push to origin
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git push origin HEAD:main
