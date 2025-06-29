@@ -22,7 +22,7 @@ jobs:
 
       - name: Add upstream remote
         run: |
-          git remote add upstream https://github.com/nikkinikki-org/OpenWrt-nikki.git
+          git remote add upstream https://github.com/rivandraa/OpenWRT-Nikki-TProxy.git
           git fetch upstream
 
       - name: Merge changes from upstream/main
