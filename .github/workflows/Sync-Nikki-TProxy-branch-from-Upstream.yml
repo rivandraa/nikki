@@ -1,0 +1,47 @@
+name: Sync Nikki-TProxy branch from Upstream
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * *' # Setiap hari jam 10:00 WIB
+
+jobs:
+  sync-nikki-tproxy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Add upstream remote
+        run: |
+          git remote add upstream https://github.com/rivandraa/OpenWRT-Nikki-TProxy.git
+          git fetch upstream Nikki-TProxy
+
+      - name: Switch to Nikki-TProxy branch (create if needed)
+        run: |
+          if git show-ref --quiet refs/heads/Nikki-TProxy; then
+            git checkout Nikki-TProxy
+          else
+            git checkout -b Nikki-TProxy upstream/Nikki-TProxy
+          fi
+
+      - name: Merge latest changes from upstream/Nikki-TProxy
+        run: |
+          git merge upstream/Nikki-TProxy --allow-unrelated-histories || true
+
+      - name: Set remote url with PAT
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.PAT_WORKFLOW }}@github.com/${{ github.repository }}.git
+
+      - name: Push changes to my repo
+        run: |
+          git push origin Nikki-TProxy
