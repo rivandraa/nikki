@@ -30,9 +30,9 @@ jobs:
           git checkout main
           git merge upstream/main --allow-unrelated-histories || true
 
-      - name: Set remote url with token
+      - name: Set remote url with PAT
         run: |
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git remote set-url origin https://x-access-token:${{ secrets.PAT_WORKFLOW }}@github.com/${{ github.repository }}.git
 
       - name: Push changes to my repo
         run: |
