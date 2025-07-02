@@ -19,6 +19,7 @@ INCLUDE_SH="$SH_DIR/include.sh"
 FIREWALL_INCLUDE_SH="$SH_DIR/firewall_include.sh"
 
 # nftables
+XXX=
 NFT_DIR="$HOME_DIR/nftables"
 RESERVED_IP_NFT="$NFT_DIR/reserved_ip.nft"
 RESERVED_IP6_NFT="$NFT_DIR/reserved_ip6.nft"
