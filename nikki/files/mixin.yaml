@@ -1,13 +1,3 @@
-# Mixin File
-# You can set any mihomo profile's config at here, it will mixin to the profile.
-#
-# For example:
-#
-# global-client-fingerprint: chrome # set fingerprint for TLS transport
-# experimental: # experimental config
-#   quic-go-disable-gso: false # disable quic-go GSO support
-#   quic-go-disable-ecn: false # disable quic-go ECN support
-#   dialer-ip4p-convert: false # IP4P support
 # proxies: # overwrite proxies
 #   - name: "PROXY"
 #     type: ss
