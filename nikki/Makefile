@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=nikki-modif-r20
-PKG_VERSION:=2025
+PKG_NAME:=nikki-modif-r21
+PKG_VERSION:=2025-01
 PKG_RELEASE:=19.20
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
