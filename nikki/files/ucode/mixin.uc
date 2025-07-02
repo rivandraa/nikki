@@ -3,12 +3,6 @@
 const uci = cursor();
 const ubus = connect();
 
-const config = {};
-
-const outbound_interface = uci.get('nikki', 'mixin', 'inbound_interface');
-const outbound_interface_status = ubus.call('network.interface', 'status', { 'interface': outbound_interface });
-const outbound_device = outbound_interface_status?.l3_device ?? outbound_interface_status?.device ?? '';
-
 config['log-level'] = uci.get('nikki', 'mixin', 'log_level');
 config['mode'] = uci.get('nikki', 'mixin', 'mode');
 config['find-process-mode'] = uci.get('nikki', 'mixin', 'match_process');
