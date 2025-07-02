@@ -1,12 +1,5 @@
 #!/bin/sh
 
-# paths
-
-# log
-LOG_DIR="/var/log/nikki"
-APP_LOG_PATH="$LOG_DIR/app.log"
-CORE_LOG_PATH="$LOG_DIR/core.log"
-
 # temp
 TEMP_DIR="/var/run/nikki"
 PID_FILE_PATH="$TEMP_DIR/nikki.pid"
