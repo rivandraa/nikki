@@ -1,16 +1,6 @@
 #!/bin/sh
 
 # paths
-PROG="/usr/bin/mihomo"
-HOME_DIR="/etc/nikki"
-PROFILES_DIR="$HOME_DIR/profiles"
-SUBSCRIPTIONS_DIR="$HOME_DIR/subscriptions"
-MIXIN_FILE_PATH="$HOME_DIR/mixin.yaml"
-RUN_DIR="$HOME_DIR/run"
-RUN_PROFILE_PATH="$RUN_DIR/config.yaml"
-PROVIDERS_DIR="$RUN_DIR/providers"
-RULE_PROVIDERS_DIR="$PROVIDERS_DIR/rule"
-PROXY_PROVIDERS_DIR="$PROVIDERS_DIR/proxy"
 
 # log
 LOG_DIR="/var/log/nikki"
