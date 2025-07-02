@@ -1,6 +1,6 @@
 include $(TOPDIR)/rules.mk
 
-PKG_VERSION:=1.23.4
+PKG_VERSION:=1.24.0
 #Melakuakn perubahan versi
 
 LUCI_TITLE:=LuCI Support for nikki
