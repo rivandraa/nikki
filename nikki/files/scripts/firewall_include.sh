@@ -7,7 +7,7 @@ config_load nikki
 config_get enabled "config" "enabled" 0
 config_get tcp_mode "proxy" "tcp_mode"
 config_get udp_mode "proxy" "udp_mode"
-config_get tun_device "nikki" "tun_device"
+config_get tun_device "nikki_mixin" "tun_device"
 
 if [ "$enabled" == 1 ] && [[ "$tcp_mode" == "tun" || "$udp_mode" == "tun" ]]; then
 	nft insert rule inet fw4 input iifname "$tun_device" counter accept comment "nikki"
