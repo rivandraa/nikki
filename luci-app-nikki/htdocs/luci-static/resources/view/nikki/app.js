@@ -35,12 +35,12 @@ return view.extend({
 
         let m, s, o;
 
-        m = new form.Map('nikki', _('Nikki'), `${_('Transparent Proxy with Mihomo on OpenWrt.')} <a href="https://github.com/nikkinikki-org/OpenWrt-nikki/wiki" target="_blank">${_('How To Use')}</a>`);
+        m = new form.Map('nikki', _('Nikki'), `${_('Transparent Proxy with Mihomo on OpenWrt.')});
 
-        s = m.section(form.TableSection, 'status', _('Status'));
+        s = m.section(form.TableSection, 'status', _('XX Status'));
         s.anonymous = true;
 
-        o = s.option(form.Value, '_app_version', _('App Version'));
+        o = s.option(form.Value, '_app_version', _('XX App Version'));
         o.readonly = true;
         o.load = function () {
             return appVersion;
