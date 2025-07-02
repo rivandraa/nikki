@@ -1,24 +1,3 @@
-
-const callRCList = rpc.declare({
-    object: 'rc',
-    method: 'list',
-    params: ['name'],
-    expect: { '': {} }
-});
-
-const callRCInit = rpc.declare({
-    object: 'rc',
-    method: 'init',
-    params: ['name', 'action'],
-    expect: { '': {} }
-});
-
-const callNikkiVersion = rpc.declare({
-    object: 'luci.nikki',
-    method: 'version',
-    expect: { '': {} }
-});
-
 const callNikkiProfile = rpc.declare({
     object: 'luci.nikki',
     method: 'profile',
