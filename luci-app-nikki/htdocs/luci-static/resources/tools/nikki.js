@@ -1,9 +1,3 @@
-'use strict';
-'require baseclass';
-'require uci';
-'require fs';
-'require rpc';
-'require request';
 
 const callRCList = rpc.declare({
     object: 'rc',
