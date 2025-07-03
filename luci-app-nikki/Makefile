@@ -1,9 +1,9 @@
 include $(TOPDIR)/rules.mk
 
-PKG_VERSION:=1.32-r112000
+PKG_VERSION:=1.32-r11202
 
-LUCI_TITLE:=LuCI Support for nikki modsdasfdsgfgfgf
-LUCI_DEPENDS:=+luci-base +nikki +jqfdsfdsfd
+LUCI_TITLE:=LuCI Support for nikki modif
+LUCI_DEPENDS:=+luci-base +nikki +jqf
 
 include $(TOPDIR)/feeds/luci/luci.mk
 
