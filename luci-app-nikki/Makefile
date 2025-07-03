@@ -3,7 +3,7 @@ include $(TOPDIR)/rules.mk
 PKG_VERSION:=1.31.01-r1000
 
 LUCI_TITLE:=LuCI Support for nikki
-LUCI_DEPENDS:=+luci-base +nikki +jq
+LUCI_DEPENDS:=+luci-base +nikki
 
 include $(TOPDIR)/feeds/luci/luci.mk
 
