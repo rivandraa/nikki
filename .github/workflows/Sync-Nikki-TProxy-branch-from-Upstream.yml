@@ -2,8 +2,6 @@ name: Sync Nikki-TProxy branch from Upstream
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 3 * * *' # Setiap hari jam 10:00 WIB
 
 jobs:
   sync-nikki-tproxy:
