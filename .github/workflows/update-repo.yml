@@ -2,8 +2,6 @@ name: Sync from Upstream
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 3 * * *' # setiap hari jam 10:00 WIB
 
 jobs:
   sync:
